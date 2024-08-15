@@ -19,11 +19,11 @@ const className = "b-header";
 		background-color: transparent;
 		width: 100%;
 		height: 80px;
-		border-bottom: 2px solid #5E5858;
+		border-bottom: 2px solid #ca9b2c;
 
 		&__title {
 			font-size: 24px;
-			color: #5E5858;
+			color: #fff;
 			font-weight: 700;
 		}
 	}

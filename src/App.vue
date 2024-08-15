@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router';
-import Header from './components/Header.vue';
-import '../src/assets/fonts/fonts.scss';
+import { RouterView } from 'vue-router'
+import Header from './components/Header.vue'
+import '../src/assets/fonts/fonts.scss'
 </script>
 
 <template>
-	<Header />
-	<router-view />
+	<div>
+		<Header />
+		<router-view />
+	</div>
 </template>
 
 <style scoped></style>

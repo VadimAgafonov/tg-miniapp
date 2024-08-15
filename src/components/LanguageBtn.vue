@@ -3,6 +3,16 @@ import { defineProps } from 'vue';
 import { useRouter } from 'vue-router';
 const className = "b-language-btn";
 
+interface Answer {
+	title: string
+	correct: boolean
+}
+
+interface Question {
+	question: string
+	answers: Answer[]
+}
+
 const props = defineProps({
 	title: {
 		type: String,
@@ -11,7 +21,11 @@ const props = defineProps({
 	link: {
 		type: String,
 		required: false
- 	}
+ 	},
+	questions: {
+		type: Array as () => Question[],
+		required: false
+  	}
 });
 
 const router = useRouter();
@@ -39,9 +53,9 @@ const navigateToLink = () => {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		border: 2px solid #5E5858;
+		border: 2px solid #ca9b2c;
 		margin-bottom: 14px;
-		color: #5E5858;
+		color: #fff;
 		font-size: 20px;
 		width: 135px;
 		height: 45px;
@@ -49,8 +63,7 @@ const navigateToLink = () => {
 		transition: all 0.2s linear;
 
 		&:hover {
-			background-color: #5E5858;
-			color: #fff;
+			background-color: #ca9b2c;
 		}
 
 		&:last-child {
